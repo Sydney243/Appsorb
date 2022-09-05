@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.TopicFormFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.appsorbv6.viewmodel.TopicFormViewModel" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTwo"
+        >
+
+
+
+        <!--edit text for note title-->
+
+
+        <EditText
+
+            android:id="@+id/idEdtTopicName"
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40sp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter Topic Title"
+            android:minHeight="48dp"
+            android:paddingLeft="20sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <!--edit text for note description-->
+
+
+        <!--button for saving and updating a note-->
+        <EditText
+
+            android:id="@+id/idEdtTopicDesc"
+            android:layout_width="379dp"
+            android:layout_height="266dp"
+            android:layout_below="@id/idEdtTopicName"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/colorOne"
+            android:gravity="start|top"
+            android:hint="Enter your Topic Details"
+            android:inputType="textMultiLine"
+            android:paddingLeft="20sp"
+            android:singleLine="false"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/layoutIcons"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_below="@+id/idEdtTopicDesc"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+
+                android:id="@+id/btnImage"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_below="@+id/txtInsertMessage"
+                android:layout_marginTop="0dp"
+                android:background="@null"
+                android:src="@drawable/ic_action_name" />
+
+
+            <ImageButton
+
+                android:id="@+id/btnAudio"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_below="@+id/txtInsertMessage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0sp"
+                android:background="@null"
+                android:src="@drawable/ic_action_audio" />
+
+
+            <ImageButton
+                android:id="@+id/btnFile"
+                android:layout_width="50dp"
+                android:layout_height="50sp"
+                android:layout_below="@+id/txtInsertMessage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0sp"
+                android:background="@null"
+                android:src="@drawable/ic_action_file" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/BtnSubmit"
+            android:layout_below="@id/layoutIcons"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20sp"
+                android:text="Attachments"
+                android:textSize="30sp" />
+
+            <TextView
+                android:paddingTop="20sp"
+                android:id="@+id/txtImageFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20sp"
+                android:text="Attachments"
+                android:textSize="15sp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:paddingTop="20sp"
+                android:id="@+id/txtAudioFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20sp"
+                android:text="Attachments"
+                android:textSize="15sp"
+                android:visibility="invisible"/>
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/BtnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Button"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+</layout>
+

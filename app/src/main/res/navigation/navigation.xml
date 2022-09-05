@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/topicListFragment">
+
+    <fragment
+        android:id="@+id/topicListFragment"
+        android:name="com.example.appsorbv6.view.TopicListFragment"
+        android:label="fragment_topic_list"
+        tools:layout="@layout/fragment_topic_list" >
+        <action
+            android:id="@+id/action_topicListFragment_to_fragmentTopicForm"
+            app:destination="@id/fragmentTopicForm" />
+        <action
+            android:id="@+id/action_topicListFragment_to_fragmentTopicDetail"
+            app:destination="@id/fragmentTopicDetail" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTopicDetail"
+        android:name="com.example.appsorbv6.view.FragmentTopicDetail"
+        android:label="fragment_topic_detail"
+        tools:layout="@layout/fragment_topic_detail" >
+        <action
+            android:id="@+id/action_fragmentTopicDetail_to_fragmentTopicForm"
+            app:destination="@id/fragmentTopicForm" />
+
+        <argument
+            android:name="topicId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentTopicForm"
+        android:name="com.example.appsorbv6.view.FragmentTopicForm"
+        android:label="fragment_topic_form"
+        tools:layout="@layout/fragment_topic_form">
+
+        <argument
+            android:name="topicId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

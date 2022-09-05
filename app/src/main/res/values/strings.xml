@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AppsorbV6</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ok_label">Ok</string>
+
+    <string name="no_read_storage_permission_title">No read external storage permission</string>
+    <string name="no_read_storage_permission_message">Read external storage has not been granted.  This app cannot access the file.</string>
+</resources>
